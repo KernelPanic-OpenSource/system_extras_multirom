@@ -3,28 +3,28 @@ cont=""
 base=""
 
 # Move old installation of multirom to MultiROM/multirom
-if [ -d "/data/media/multirom" ] && [ ! -d "/data/media/MultiROM/multirom" ]; then
-    mkdir "/data/media/MultiROM"
-    mv "/data/media/multirom" "/data/media/MultiROM/multirom"
-elif [ -d "/data/media/0/multirom" ] && [ ! -d "/data/media/0/MultiROM/multirom" ]; then
-    mkdir "/data/media/0/MultiROM"
-    mv "/data/media/0/multirom" "/data/media/0/MultiROM/multirom"
+if [ -d "/data/media/multirom" ] && [ ! -d "/data/media/multirom" ]; then
+    mkdir "/data/media/multirom"
+    mv "/data/media/multirom" "/data/media/multirom"
+elif [ -d "/data/media/0/multirom" ] && [ ! -d "/data/media/0/multirom" ]; then
+    mkdir "/data/media/0/multirom"
+    mv "/data/media/0/multirom" "/data/media/0/multirom"
 fi
 
 # Check for existing dirs otherwise create them
-if [ -d "/data/media/MultiROM/multirom" ] ; then
-    cont="/data/media/MultiROM"
-    base="/data/media/MultiROM/multirom"
-elif [ -d "/data/media/0/MultiROM/multirom" ] ; then
-    cont="/data/media/0/MultiROM"
-    base="/data/media/0/MultiROM/multirom"
+if [ -d "/data/media/multirom" ] ; then
+    cont="/data/media/multirom"
+    base="/data/media/multirom"
+elif [ -d "/data/media/0/multirom" ] ; then
+    cont="/data/media/0/multirom"
+    base="/data/media/0/multirom"
 else
     if [ -d "/data/media/0" ] ; then
-        cont="/data/media/0/MultiROM"
-        base="/data/media/0/MultiROM/multirom"
+        cont="/data/media/0/multirom"
+        base="/data/media/0/multirom"
     else
-        cont="/data/media/MultiROM"
-        base="/data/media/MultiROM/multirom"
+        cont="/data/media/multirom"
+        base="/data/media/multirom"
     fi
 
     mkdir "$cont"

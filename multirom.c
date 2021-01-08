@@ -156,7 +156,7 @@ int multirom_find_base_dir(void)
         NULL,
     };
     static const char *mrom_dirs[] = {
-        "MultiROM/multirom",
+        "multirom",
         "multirom",
         NULL,
     };

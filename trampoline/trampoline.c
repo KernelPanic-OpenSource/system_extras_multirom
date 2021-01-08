@@ -53,8 +53,8 @@ static int find_multirom(void)
     struct stat info;
 
     static const char *paths[] = {
-        REALDATA"/media/0/MultiROM/multirom",
-        REALDATA"/media/MultiROM/multirom",
+        REALDATA"/media/0/multirom",
+        REALDATA"/media/multirom",
         REALDATA"/media/0/multirom", // 4.2
         REALDATA"/media/multirom",
         NULL,
